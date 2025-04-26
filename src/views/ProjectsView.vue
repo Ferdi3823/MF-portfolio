@@ -75,7 +75,7 @@ const projectCategories = ref<ProjectCategory[]>([
       },
       {
         id: 4,
-        title: 'Application Mobile à venir',
+        title: 'Application Mobile à venir plus tard',
         description: 'A venir',
         pdfUrl: '/pdfs/fitness.pdf',
         technologies: [],
