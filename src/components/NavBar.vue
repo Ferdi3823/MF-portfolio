@@ -22,10 +22,13 @@ const toggleMenu = () => {
       <div :class="['nav-links', { open: isMenuOpen }]">
         <router-link to="/" class="nav-link" @click="isMenuOpen = false"> Accueil </router-link>
         <router-link to="/about" class="nav-link" @click="isMenuOpen = false">
-          À propos
+          À propos de moi
         </router-link>
         <router-link to="/projects" class="nav-link" @click="isMenuOpen = false">
           Projets
+        </router-link>
+        <router-link to="/veille" class="nav-link" @click="isMenuOpen = false">
+          Ma Veille
         </router-link>
       </div>
     </div>

@@ -8,6 +8,7 @@ interface Skill {
   description: string
   relatedSkills: string[]
   color: string
+  iconUrl?: string
 }
 
 const flippedCards = ref<Set<string>>(new Set())
@@ -34,7 +35,7 @@ const languageSkills = [
     icon: 'devicon-typescript-plain colored',
     category: 'Frontend',
     description: 'Développement typé et orienté objet',
-    relatedSkills: ['ES6+', 'Types', 'Interfaces'],
+    relatedSkills: ['POO', 'Types', 'Interfaces'],
     color: '#3178c6',
   },
   {
@@ -42,7 +43,7 @@ const languageSkills = [
     icon: 'devicon-nodejs-plain colored',
     category: 'Backend',
     description: 'Développement serveur JavaScript',
-    relatedSkills: ['Express', 'API REST', 'WebSocket'],
+    relatedSkills: ['Express', 'API REST'],
     color: '#68a063',
   },
   {
@@ -69,6 +70,47 @@ const languageSkills = [
     relatedSkills: ['Android', 'Spring Boot', 'Coroutines'],
     color: '#7F52FF',
   },
+  {
+    name: 'Python',
+    icon: 'devicon-python-plain colored',
+    category: 'Programming',
+    description: 'Langage polyvalent pour développement et data science',
+    relatedSkills: ['Algorithmie', 'Fonctions', 'NumPy'],
+    color: '#3776ab',
+  },
+  {
+    name: 'C',
+    icon: 'devicon-c-plain colored',
+    category: 'Programming',
+    description: 'Programmation système et algorithmique de base',
+    relatedSkills: ['Pointeurs', 'Gestion mémoire', 'Algorithmie'],
+    color: '#00599C',
+  },
+  {
+    name: 'OCaml',
+    icon: 'devicon-ocaml-plain colored',
+    category: 'Programming',
+    description: 'Programmation fonctionnelle et orientée objet',
+    relatedSkills: ['Programmation fonctionnelle', 'Récursivité'],
+    color: '#EC6813',
+  },
+  {
+    name: 'VBA',
+    icon: 'vba-custom-icon',
+    iconUrl: '/src/assets/vba.jpg', // Vous devrez ajouter cette image
+    category: 'Automation',
+    description: 'Automatisation de tâches dans Microsoft Office',
+    relatedSkills: ['Macros Excel', 'Access VBA'],
+    color: '#217346',
+  },
+  {
+    name: 'SQL',
+    icon: 'devicon-mysql-plain colored',
+    category: 'Database',
+    description: 'Gestion et manipulation de bases de données relationnelles',
+    relatedSkills: ['MySQL', 'Requêtes complexes', 'Jointures'],
+    color: '#00758F',
+  },
 ] as Skill[]
 
 const toolSkills = [
@@ -77,16 +119,16 @@ const toolSkills = [
     icon: 'devicon-git-plain colored',
     category: 'Outils',
     description: 'Gestion de version et collaboration',
-    relatedSkills: ['GitHub', 'GitFlow', 'CI/CD'],
+    relatedSkills: ['GitHub', 'CI/CD'],
     color: '#f05032',
   },
   {
-    name: 'Docker',
-    icon: 'devicon-docker-plain colored',
-    category: 'DevOps',
-    description: 'Conteneurisation et déploiement',
-    relatedSkills: ['Docker Compose', 'Kubernetes', 'CI/CD'],
-    color: '#2496ed',
+    name: 'IntelliJ IDEA',
+    icon: 'devicon-intellij-plain colored',
+    category: 'IDE',
+    description: 'IDE pour développement Android avec Java/Kotlin',
+    relatedSkills: ['Android Studio', 'Kotlin', 'Java', 'Gradle'],
+    color: '#000000',
   },
   {
     name: 'VS Code',
@@ -98,7 +140,8 @@ const toolSkills = [
   },
   {
     name: 'Excel',
-    icon: 'fa-solid fa-file-excel',
+    icon: 'excel-custom-icon',
+    iconUrl: '/src/assets/excel.png',
     category: 'Bureautique',
     description: 'Analyse de données et tableaux complexes',
     relatedSkills: ['Macros', 'Tableaux croisés', 'Formules'],
@@ -106,11 +149,29 @@ const toolSkills = [
   },
   {
     name: 'Access',
-    icon: 'fa-solid fa-database',
+    icon: 'access-custom-icon',
+    iconUrl: '/src/assets/access.png',
     category: 'Base de données',
     description: 'Gestion de bases de données relationnelles',
     relatedSkills: ['SQL', 'Formulaires', 'Requêtes'],
     color: '#A4373A',
+  },
+  {
+    name: 'Word',
+    icon: 'word-custom-icon',
+    iconUrl: '/src/assets/word.png',
+    description: 'Traitement de texte et documentation professionnelle',
+    relatedSkills: ['Styles', 'Mise en page'],
+    color: '#2B579A',
+  },
+  {
+    name: 'Postman',
+    icon: 'postman-custom-icon',
+    iconUrl: '/src/assets/postman.png',
+    category: 'API Testing',
+    description: "Test et développement d'APIs",
+    relatedSkills: ['API REST', 'Tests automatisés'],
+    color: '#FF6C37',
   },
 ] as Skill[]
 </script>
@@ -158,7 +219,14 @@ const toolSkills = [
             <div class="hexagon" :class="{ 'is-flipped': flippedCards.has(skill.name) }">
               <!-- Face avant -->
               <div class="hexagon-front">
-                <i :class="[skill.icon]" class="skill-icon"></i>
+                <!-- Utiliser une image si iconUrl existe, sinon utiliser l'icône classique -->
+                <img
+                  v-if="skill.iconUrl"
+                  :src="skill.iconUrl"
+                  :alt="skill.name"
+                  class="skill-icon-img"
+                />
+                <i v-else :class="[skill.icon]" class="skill-icon"></i>
                 <h3>{{ skill.name }}</h3>
               </div>
               <!-- Face arrière -->
@@ -187,7 +255,14 @@ const toolSkills = [
           >
             <div class="hexagon" :class="{ 'is-flipped': flippedCards.has(skill.name) }">
               <div class="hexagon-front">
-                <i :class="[skill.icon]" class="skill-icon"></i>
+                <!-- Même logique pour les outils -->
+                <img
+                  v-if="skill.iconUrl"
+                  :src="skill.iconUrl"
+                  :alt="skill.name"
+                  class="skill-icon-img"
+                />
+                <i v-else :class="[skill.icon]" class="skill-icon"></i>
                 <h3>{{ skill.name }}</h3>
               </div>
               <div class="hexagon-back">
@@ -443,6 +518,16 @@ const toolSkills = [
   transition: all 0.3s ease;
 }
 
+/* Style pour les images d'icônes */
+.skill-icon-img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
 .hexagon-front h3 {
   font-size: 1.2rem;
   margin: 0;
@@ -498,6 +583,11 @@ const toolSkills = [
 
   .skill-icon {
     font-size: 2rem;
+  }
+
+  .skill-icon-img {
+    width: 2rem;
+    height: 2rem;
   }
 
   .hexagon-back p {

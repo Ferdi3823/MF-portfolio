@@ -11,14 +11,13 @@ interface ProjectCategory {
 }
 
 // État pour les filtres et la catégorie active
-const activeCategory = ref('e5')
-const searchQuery = ref('')
+const activeCategory = ref('e6')
 const projectInFocus = ref<Project | null>(null)
 const projectCategories = ref<ProjectCategory[]>([
   {
-    id: 'e5',
-    title: 'Épreuve E5',
-    description: "Projets réalisés dans le cadre de l'épreuve E5 du BTS SIO option SLAM.",
+    id: 'e6',
+    title: 'Épreuve E6',
+    description: "Projets réalisés dans le cadre de l'épreuve E6 du BTS SIO option SLAM.",
     projects: [
       {
         id: 1,
@@ -38,32 +37,32 @@ const projectCategories = ref<ProjectCategory[]>([
       },
       {
         id: 2,
-        title: 'Dashboard Analytics',
+        title: 'Carist-SI',
         description:
-          'Tableau de bord interactif pour la visualisation de données offrant des insights sur les performances commerciales.',
-        pdfUrl: '/pdfs/dashboard.pdf',
-        technologies: ['React', 'TypeScript', 'D3.js', 'Firebase'],
-        date: '2023',
-        imageUrl: '/project2.jpg',
+          'Application de gestion de colis dans un entrepôt avec interface moderne et fonctionnalités avancées.',
+        pdfUrl: '/public/pdfs/CaristDesktop.pdf',
+        technologies: ['Kotlin', 'MySQL2'],
+        date: '2025',
+        imageUrl: '/src/assets/CaristLogo.png',
         details: [
-          'Visualisations interactives avec D3.js',
-          'Filtrage et analyse de données en temps réel',
-          'Export de rapports au format PDF et Excel',
-          'Interface adaptative selon les profils utilisateurs',
+          "Système d'authentification sécurisé",
+          'Création, suppression et organisation des colis',
+          'Vérification de la taille et du poids des colis',
+          'Interface utilisateur intuitive et moderne',
         ],
       },
     ],
   },
   {
-    id: 'e4',
-    title: 'Épreuve E4',
-    description: "Projets développés pour l'épreuve E4 démontrant diverses compétences techniques.",
+    id: 'e5',
+    title: 'Épreuve E5',
+    description: "Projets développés pour l'épreuve E5 démontrant diverses compétences techniques.",
     projects: [
       {
         id: 3,
         title: 'Carist-SI',
-        description: 'Application de gestion de colis dans un entrepôt.',
-        pdfUrl: '/public/pdfs/CaristDesktop.pdf',
+        description: 'Application en client lourd de gestion de colis dans un entrepôt.',
+        pdfUrl: '/pdfs/CaristDesktop.pdf',
         technologies: ['Kotlin', 'MySQL2'],
         date: '2025',
         imageUrl: '/src/assets/CaristLogo.png',
@@ -75,20 +74,20 @@ const projectCategories = ref<ProjectCategory[]>([
       },
       {
         id: 4,
-        title: 'Application Mobile à venir plus tard',
-        description: 'A venir',
-        pdfUrl: '/pdfs/fitness.pdf',
-        technologies: [],
-        date: '2024',
-        imageUrl: '/project4.jpg',
-        details: [],
+        title: 'EZcontact',
+        description: 'Application mobile de gestion de contacts professionels',
+        pdfUrl: '/pdfs/Livrable_EZcontact.pdf',
+        technologies: ['Kotlin', 'MySQL2', 'Android'],
+        date: '2025',
+        imageUrl: '/src/assets/EZcontact.png',
+        details: ["Maitrise de l'interface Android", "Recherche d'éléments en temps réel"],
       },
       {
         id: 5,
         title: 'NurseCare',
         description:
           "Une application web de gestion des différents rôles dans un cabinet d'infirmiers permettant de suivre les tâches, les patients et les équipes médicales.",
-        pdfUrl: '/pdfs/NurseCare.pdf',
+        pdfUrl: '/pdfs/NurseCareF_merged.pdf',
         technologies: ['Vue.js', 'Node.js', 'MySQL2', 'Express'],
         date: '2025',
         imageUrl: '/src/assets/Nursecare.png',
@@ -101,77 +100,57 @@ const projectCategories = ref<ProjectCategory[]>([
       },
       {
         id: 6,
-        title: 'CRM pour Petites Entreprises',
-        description: 'Système de gestion de la relation client adapté aux besoins des TPE/PME.',
-        pdfUrl: '/pdfs/crm.pdf',
-        technologies: ['Vue.js', 'PostgreSQL', 'Express', 'Node.js'],
-        date: '2023',
-        imageUrl: '/project6.jpg',
+        title: 'TEMAO',
+        description: "Refonte d'un outil informatique d'aide à la saisie utilisateur sur ACCESS",
+        pdfUrl: '/pdfs/Refonte_TEMAO.pdf',
+        technologies: ['VBA', 'SQL', 'Macros ACCESS'],
+        date: '2024',
+        imageUrl: '/src/assets/TEMAOLogo.png',
         details: [
-          'Gestion des contacts et opportunités commerciales',
-          'Automatisation des emails et rappels',
-          'Génération de devis et factures',
-          "Rapports d'activité personnalisables",
+          'Manipulation de formulaires',
+          'Contrôle de la saisie utilisateur',
+          'Production de fichiers intègre',
         ],
       },
       {
         id: 7,
-        title: 'Portfolio Dynamique',
-        description:
-          'Portfolio web personnalisable pour artistes et designers avec galerie interactive.',
-        pdfUrl: '/pdfs/portfolio.pdf',
-        technologies: ['Next.js', 'Tailwind CSS', 'Prisma', 'PostgreSQL'],
-        date: '2022',
-        imageUrl: '/project7.jpg',
+        title: "Organiz'heure",
+        description: 'Application web de gestion de tâches ',
+        pdfUrl: '/pdfs/Livrable_Organiz.pdf',
+        technologies: ['Vue.js', 'Tailwind CSS', 'Express', 'MySQL2'],
+        date: '2024',
+        imageUrl: '/src/assets/ogz.png',
         details: [
-          "Galerie d'images avec effets de transition",
-          "Interface d'administration intuitive",
-          'Optimisation SEO automatique',
-          'Intégration de réseaux sociaux et analytics',
+          "Page d'authentification",
+          'Restriction des droits pour les profils non administrateurs',
+          'Mots de passe Hashés en base de données',
+          'gestion complète des taches',
         ],
       },
       {
         id: 8,
-        title: 'Application de Budgétisation',
-        description:
-          'Outil de gestion financière pour aider les utilisateurs à suivre leurs dépenses et économiser.',
-        pdfUrl: '/pdfs/budget.pdf',
-        technologies: ['Flutter', 'Firebase', 'GraphQL', 'Node.js'],
-        date: '2022',
-        imageUrl: '/project8.jpg',
-        details: [
-          'Catégorisation automatique des transactions',
-          "Visualisations de l'évolution des dépenses",
-          "Objectifs d'épargne et notifications",
-          'Synchronisation entre plusieurs appareils',
-        ],
+        title: 'Installation GLPI 10',
+        description: 'Installation de GLPI 10 sur une VM Debain 12',
+        pdfUrl: '/pdfs/Installation_GLPI_10.pdf',
+        technologies: ['Virtualbox', 'bash'],
+        date: '2023',
+        imageUrl: '/src/assets/GLPI.gif',
+        details: ['Mise en place environnement web complet', "Compréhension d'un serveur Linux"],
       },
     ],
   },
 ])
 
-// Filtrage des projets
+// Projets filtrés (plus de recherche)
 const filteredProjects = computed(() => {
   const currentCategoryProjects =
     projectCategories.value.find((cat) => cat.id === activeCategory.value)?.projects || []
-
-  return currentCategoryProjects.filter((project) => {
-    // Filtrage par recherche
-    const searchLower = searchQuery.value.toLowerCase()
-    const searchMatch =
-      !searchQuery.value ||
-      project.title.toLowerCase().includes(searchLower) ||
-      project.description.toLowerCase().includes(searchLower)
-
-    return searchMatch
-  })
+  return currentCategoryProjects
 })
 
 // Changement de catégorie
 const changeCategory = (categoryId: string) => {
   activeCategory.value = categoryId
-  // Reset des filtres lors du changement de catégorie
-  searchQuery.value = ''
 }
 
 // Ouverture du modal de détails
@@ -189,9 +168,11 @@ const openPdf = (url: string) => {
   window.open(url, '_blank')
 }
 
-// Réinitialisation des filtres
-const resetFilters = () => {
-  searchQuery.value = ''
+// Fonction pour télécharger le tableau de compétences E5
+const downloadE5Summary = () => {
+  // Remplacez ce chemin par le bon chemin vers votre fichier PDF
+  const pdfUrl = 'public/pdfs/E5_tableauSynthèse.pdf'
+  window.open(pdfUrl, '_blank')
 }
 </script>
 
@@ -215,25 +196,50 @@ const resetFilters = () => {
       <p>{{ projectCategories.find((cat) => cat.id === activeCategory)?.description }}</p>
     </div>
 
-    <!-- Filtres -->
-    <div class="filters-container">
-      <div class="search-box">
-        <input
-          v-model="searchQuery"
-          type="text"
-          placeholder="Rechercher un projet..."
-          class="search-input"
-        />
-        <i class="fas fa-search search-icon"></i>
-      </div>
+    <!-- Projets E6 - Mise en avant spéciale -->
+    <div v-if="activeCategory === 'e6'" class="featured-projects">
+      <div class="featured-grid">
+        <div
+          v-for="project in filteredProjects"
+          :key="project.id"
+          class="featured-project-card"
+          @click="openProjectDetails(project)"
+        >
+          <div class="featured-image">
+            <img :src="project.imageUrl" :alt="project.title" loading="lazy" />
+            <div class="featured-badge">Projet E6</div>
+            <div class="featured-overlay">
+              <span class="view-details">
+                <i class="fas fa-eye"></i>
+                Découvrir le projet
+              </span>
+            </div>
+          </div>
 
-      <button class="reset-button" @click="resetFilters" v-if="searchQuery">
-        <i class="fas fa-times"></i> Réinitialiser la recherche
-      </button>
+          <div class="featured-content">
+            <div class="featured-header">
+              <h3>{{ project.title }}</h3>
+              <span class="featured-date">{{ project.date }}</span>
+            </div>
+            <p class="featured-description">{{ project.description }}</p>
+
+            <div class="featured-technologies">
+              <span v-for="tech in project.technologies" :key="tech" class="featured-tech-tag">
+                {{ tech }}
+              </span>
+            </div>
+
+            <button class="featured-cta" @click.stop="openPdf(project.pdfUrl)">
+              <i class="fas fa-file-pdf"></i>
+              Voir le projet complet
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Projets -->
-    <div class="projects-grid">
+    <!-- Projets E5 - Grille normale -->
+    <div v-else class="projects-grid">
       <div
         v-for="project in filteredProjects"
         :key="project.id"
@@ -259,12 +265,27 @@ const resetFilters = () => {
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Message si aucun projet -->
-      <div v-if="filteredProjects.length === 0" class="no-projects">
-        <i class="fas fa-search"></i>
-        <p>Aucun projet ne correspond à votre recherche.</p>
-        <button class="reset-button" @click="resetFilters">Réinitialiser la recherche</button>
+    <!-- Bouton de téléchargement pour E5 -->
+    <div v-if="activeCategory === 'e5'" class="download-section">
+      <div class="download-card">
+        <div class="download-content">
+          <div class="download-icon">
+            <i class="fas fa-file-pdf"></i>
+          </div>
+          <div class="download-info">
+            <h3>Tableau de Compétences E5</h3>
+            <p>
+              Consultez le tableau récapitulatif complet de tous les projets réalisés pour l'épreuve
+              E5 et plus...
+            </p>
+          </div>
+          <button class="download-btn" @click="downloadE5Summary">
+            <i class="fas fa-eye"></i>
+            Consulter
+          </button>
+        </div>
       </div>
     </div>
 
@@ -378,69 +399,180 @@ const resetFilters = () => {
   line-height: 1.6;
 }
 
-/* Filtres */
-.filters-container {
-  margin-bottom: 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: center;
+/* Projets E5 mis en avant */
+.featured-projects {
   max-width: 1400px;
-  margin: 0 auto 3rem;
-  width: 100%;
-}
-
-.search-box {
-  position: relative;
-  max-width: 600px;
   margin: 0 auto;
   width: 100%;
 }
 
-.search-input {
-  width: 100%;
-  padding: 1rem 1.5rem;
-  border-radius: 30px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 1rem;
-  padding-right: 3rem;
-  transition: all 0.3s ease;
-  box-shadow: var(--shadow-sm);
+.featured-grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
-.search-input:focus {
-  outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
-}
-
-.search-icon {
-  position: absolute;
-  right: 1.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--text-color);
-  opacity: 0.5;
-}
-
-.reset-button {
-  background: none;
-  border: none;
-  color: var(--text-color);
+.featured-project-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
   cursor: pointer;
+  width: 450px;
+  max-width: 100%;
+  position: relative;
+}
+
+.featured-project-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 50px rgba(52, 152, 219, 0.2);
+}
+
+.featured-image {
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.featured-project-card:hover .featured-image img {
+  transform: scale(1.1);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.featured-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(44, 62, 80, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.featured-project-card:hover .featured-overlay {
+  opacity: 1;
+}
+
+.view-details {
+  color: white;
+  background: var(--primary-color);
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.featured-project-card:hover .view-details {
+  transform: translateY(0);
+}
+
+.featured-content {
+  padding: 2.5rem;
+}
+
+.featured-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.featured-content h3 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.featured-date {
+  color: var(--text-color);
   opacity: 0.7;
+  font-weight: 500;
+  background: rgba(52, 152, 219, 0.1);
+  padding: 0.3rem 1rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+.featured-description {
+  color: var(--text-color);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.featured-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.featured-tech-tag {
+  padding: 0.5rem 1.2rem;
+  background: rgba(52, 152, 219, 0.1);
+  color: var(--primary-color);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
   transition: all 0.3s ease;
 }
 
-.reset-button:hover {
-  opacity: 1;
-  color: var(--primary-color);
+.featured-tech-tag:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
 }
 
-/* Grille de projets */
+.featured-cta {
+  width: 100%;
+  padding: 1.2rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.featured-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Grille de projets normale pour E4 */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -512,20 +644,6 @@ const resetFilters = () => {
   opacity: 1;
 }
 
-.view-details {
-  color: white;
-  background: var(--primary-color);
-  padding: 0.7rem 1.5rem;
-  border-radius: var(--border-radius);
-  font-weight: 500;
-  transform: translateY(20px);
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover .view-details {
-  transform: translateY(0);
-}
-
 .project-info {
   padding: 1.5rem;
   flex: 1;
@@ -544,14 +662,9 @@ const resetFilters = () => {
   line-height: 1.6;
   margin-bottom: auto;
   display: -webkit-box;
-  display: -moz-box;
-  display: box;
   -webkit-line-clamp: 3;
-  -moz-line-clamp: 3;
   line-clamp: 3;
   -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -572,26 +685,83 @@ const resetFilters = () => {
   font-weight: 500;
 }
 
-/* Message quand aucun projet */
-.no-projects {
-  grid-column: 1 / -1;
-  text-align: center;
-  padding: 3rem;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-sm);
+/* Section de téléchargement E4 */
+.download-section {
+  margin-top: 3rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
-.no-projects i {
-  font-size: 3rem;
+.download-card {
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(44, 62, 80, 0.1) 100%);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.download-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.download-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.download-icon {
+  width: 80px;
+  height: 80px;
+  background: #dc3545;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.download-info {
+  flex: 1;
+}
+
+.download-info h3 {
   color: var(--primary-color);
-  opacity: 0.3;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.no-projects p {
-  margin-bottom: 1.5rem;
+.download-info p {
   color: var(--text-color);
+  line-height: 1.6;
+}
+
+.download-btn {
+  padding: 1rem 2rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-shrink: 0;
+}
+
+.download-btn:hover {
+  background: #c82333;
+  transform: translateY(-2px);
 }
 
 /* Modal de détails */
@@ -769,10 +939,26 @@ const resetFilters = () => {
     grid-template-columns: 1fr;
   }
 
+  .featured-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .featured-project-card {
+    width: 100%;
+    max-width: 500px;
+  }
+
   .category-tabs {
     flex-direction: column;
     width: 100%;
     gap: 0.5rem;
+  }
+
+  .download-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
   }
 
   .project-modal {
@@ -796,6 +982,14 @@ const resetFilters = () => {
 @media (min-width: 769px) and (max-width: 1024px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-grid {
+    justify-content: center;
+  }
+
+  .featured-project-card {
+    width: 400px;
   }
 
   .project-modal {

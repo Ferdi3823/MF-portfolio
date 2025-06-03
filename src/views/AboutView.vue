@@ -42,13 +42,13 @@ const personalInfo = {
       name: 'Résolution de problèmes',
       description:
         'Approche méthodique pour identifier et résoudre des problèmes donnés. Persévérance face aux défis techniques.',
-      icon: 'fas fa-puzzle-piece',
+      icon: 'fas fa-lightbulb', // Celle-ci fonctionne déjà
     },
     {
       name: 'Adaptabilité',
       description:
         "Facilité à s'adapter à de nouvelles technologies. Mes solides connaissances en algorithmie me permettent de comprendre rapidement un langage informatique même si je ne l'ai jamais appris/utilisé avant.",
-      icon: 'fa-regular fa-wifi',
+      icon: 'fas fa-user', // Icône simple et universelle
     },
   ] as SoftSkill[],
   interests: [
@@ -112,7 +112,7 @@ const timelineItems = ref<TimelineItem[]>([
     organization: 'GRDF (en alternance)',
     period: '2023 - 2025',
     description:
-      "Refonte d'outils informatique locaux avec base de donées access, mise en place de tableaux de reportings, participation à l'animation de réseaux, création et maintien de vigies.",
+      "Refonte d'outils informatique locaux avec base de donées ACCESS, mise en place de tableaux de reportings, participation à l'animation de réseaux, création et maintien de vigies.",
     location: 'Toulouse, France',
     logo: 'src/assets/grdf-logo.png',
     startYear: 2023,
@@ -124,7 +124,7 @@ const timelineItems = ref<TimelineItem[]>([
     organization: 'Carrefour',
     period: '2021 - 2023',
     description:
-      "présentation et vente de produits de qualité, maintien de la propreté d'un rayon, suivi de stock, tisser et maintenir une bonne relation client",
+      "Présentation et vente de produits de qualité, maintien de la propreté d'un rayon, suivi de stock, tisser et maintenir une bonne relation client",
     location: 'Meylan, France',
     logo: 'src/assets/logoCarrefour.gif',
     startYear: 2021,
@@ -134,11 +134,23 @@ const timelineItems = ref<TimelineItem[]>([
     type: 'experience',
     title: 'Equipier polyvalent',
     organization: 'Quick',
-    period: '2018 - 2019',
+    period: '2019 - 2021',
     description:
       "Travail au sein d'un collectif dans le but de satisfaire des clients en restauration rapide",
     location: 'Echirolles, France',
     logo: 'src/assets/logoQuick.gif',
+    startYear: 2019,
+    endYear: 2021,
+  },
+  {
+    type: 'experience',
+    title: 'Animateur périscolaire',
+    organization: 'École Ampère',
+    period: '2018 - 2019',
+    description:
+      "Animation d'activités éducatives et ludiques pour les enfants en dehors des heures de classe. Encadrement de groupes, organisation d'ateliers créatifs et sportifs.",
+    location: 'Echirolles, France',
+    logo: 'src/assets/ecole-ampere.png',
     startYear: 2018,
     endYear: 2019,
   },
@@ -161,7 +173,8 @@ const timelineItems = ref<TimelineItem[]>([
     title: 'Licence Informatique et mathématiques',
     organization: 'Université Grenoble Alpes',
     period: '2015 - 2018',
-    description: 'Spécialité Informatique en 2ème année',
+    description:
+      'Approfondissement des connaisances en alogorithmie, initiation aux bases de données et à la logique informatique et mathématiques',
     location: 'Echirolles, France',
     logo: 'src/assets/UGA.png',
     startYear: 2015,
