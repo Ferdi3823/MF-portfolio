@@ -27,6 +27,9 @@ const toggleMenu = () => {
         <router-link to="/projects" class="nav-link" @click="isMenuOpen = false">
           Projets
         </router-link>
+        <router-link to="/veille" class="nav-link" @click="isMenuOpen = false">
+          Veille
+        </router-link>
       </div>
     </div>
   </nav>
