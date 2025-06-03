@@ -114,7 +114,7 @@ const timelineItems = ref<TimelineItem[]>([
     description:
       "Refonte d'outils informatique locaux avec base de donées ACCESS, mise en place de tableaux de reportings, participation à l'animation de réseaux, création et maintien de vigies.",
     location: 'Toulouse, France',
-    logo: 'src/assets/grdf-logo.png',
+    logo: '/images/grdf-logo.png',
     startYear: 2023,
     endYear: 2025,
   },
@@ -126,7 +126,7 @@ const timelineItems = ref<TimelineItem[]>([
     description:
       "Présentation et vente de produits de qualité, maintien de la propreté d'un rayon, suivi de stock, tisser et maintenir une bonne relation client",
     location: 'Meylan, France',
-    logo: 'src/assets/logoCarrefour.gif',
+    logo: '/images/logoCarrefour.gif',
     startYear: 2021,
     endYear: 2023,
   },
@@ -138,7 +138,7 @@ const timelineItems = ref<TimelineItem[]>([
     description:
       "Travail au sein d'un collectif dans le but de satisfaire des clients en restauration rapide",
     location: 'Echirolles, France',
-    logo: 'src/assets/logoQuick.gif',
+    logo: '/images/logoQuick.gif',
     startYear: 2019,
     endYear: 2021,
   },
@@ -150,7 +150,7 @@ const timelineItems = ref<TimelineItem[]>([
     description:
       "Animation d'activités éducatives et ludiques pour les enfants en dehors des heures de classe. Encadrement de groupes, organisation d'ateliers créatifs et sportifs.",
     location: 'Echirolles, France',
-    logo: 'src/assets/ecole-ampere.png',
+    logo: '/images/ecole-ampere.png',
     startYear: 2018,
     endYear: 2019,
   },
@@ -164,7 +164,7 @@ const timelineItems = ref<TimelineItem[]>([
     description:
       'Développement et sécurisation sites/applications web, client lourd et mobile backend et frontend.',
     location: 'Toulouse, France',
-    logo: 'src/assets/esicad-logo.png',
+    logo: '/images/esicad-logo.png',
     startYear: 2023,
     endYear: 2025,
   },
@@ -176,7 +176,7 @@ const timelineItems = ref<TimelineItem[]>([
     description:
       'Approfondissement des connaisances en alogorithmie, initiation aux bases de données et à la logique informatique et mathématiques',
     location: 'Echirolles, France',
-    logo: 'src/assets/UGA.png',
+    logo: '/images/UGA.png',
     startYear: 2015,
     endYear: 2018,
   },
@@ -188,7 +188,7 @@ const timelineItems = ref<TimelineItem[]>([
     description:
       'Spécialité Informatique et Sciences du Numérique (ISN). Projet de fin détudes : Développement du jeu "Bataille navale"',
     location: 'Echirolles, France',
-    logo: 'src/assets/lycee.png',
+    logo: '/images/lycee.png',
     startYear: 2014,
     endYear: 2015,
   },
@@ -419,7 +419,7 @@ const sortedTimelineItems = computed(() => {
   border-radius: 50%;
   position: relative;
   z-index: 2;
-  background-image: url('@/assets/Avatar.webp');
+  background-image: url('/images/Avatar.webp');
   background-size: cover;
   background-position: center;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);

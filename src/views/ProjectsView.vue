@@ -27,7 +27,7 @@ const projectCategories = ref<ProjectCategory[]>([
         pdfUrl: '/pdfs/NurseCare.pdf',
         technologies: ['Vue.js', 'Node.js', 'MySQL', 'Express'],
         date: '2025',
-        imageUrl: '/src/assets/Nursecare.png',
+        imageUrl: '/images/Nursecare.png',
         details: [
           "Système d'authentification avec gestion des rôles",
           'Interface utilisateur responsive et intuitive',
@@ -40,10 +40,10 @@ const projectCategories = ref<ProjectCategory[]>([
         title: 'Carist-SI',
         description:
           'Application de gestion de colis dans un entrepôt avec interface moderne et fonctionnalités avancées.',
-        pdfUrl: '/public/pdfs/CaristDesktop.pdf',
+        pdfUrl: '/pdfs/CaristDesktop.pdf',
         technologies: ['Kotlin', 'MySQL2'],
         date: '2025',
-        imageUrl: '/src/assets/CaristLogo.png',
+        imageUrl: '/images/CaristLogo.png',
         details: [
           "Système d'authentification sécurisé",
           'Création, suppression et organisation des colis',
@@ -65,7 +65,7 @@ const projectCategories = ref<ProjectCategory[]>([
         pdfUrl: '/pdfs/CaristDesktop.pdf',
         technologies: ['Kotlin', 'MySQL2'],
         date: '2025',
-        imageUrl: '/src/assets/CaristLogo.png',
+        imageUrl: '/images/CaristLogo.png',
         details: [
           "Système d'authentification",
           ' Création, suppression et organisation des colis',
@@ -79,7 +79,7 @@ const projectCategories = ref<ProjectCategory[]>([
         pdfUrl: '/pdfs/Livrable_EZcontact.pdf',
         technologies: ['Kotlin', 'MySQL2', 'Android'],
         date: '2025',
-        imageUrl: '/src/assets/EZcontact.png',
+        imageUrl: '/images/EZcontact.png',
         details: ["Maitrise de l'interface Android", "Recherche d'éléments en temps réel"],
       },
       {
@@ -90,7 +90,7 @@ const projectCategories = ref<ProjectCategory[]>([
         pdfUrl: '/pdfs/NurseCareF_merged.pdf',
         technologies: ['Vue.js', 'Node.js', 'MySQL2', 'Express'],
         date: '2025',
-        imageUrl: '/src/assets/Nursecare.png',
+        imageUrl: '/images/Nursecare.png',
         details: [
           "Système d'authentification avec gestion des rôles",
           'Interface utilisateur responsive et intuitive',
@@ -105,7 +105,7 @@ const projectCategories = ref<ProjectCategory[]>([
         pdfUrl: '/pdfs/Refonte_TEMAO.pdf',
         technologies: ['VBA', 'SQL', 'Macros ACCESS'],
         date: '2024',
-        imageUrl: '/src/assets/TEMAOLogo.png',
+        imageUrl: '/images/TEMAOLogo.png',
         details: [
           'Manipulation de formulaires',
           'Contrôle de la saisie utilisateur',
@@ -119,7 +119,7 @@ const projectCategories = ref<ProjectCategory[]>([
         pdfUrl: '/pdfs/Livrable_Organiz.pdf',
         technologies: ['Vue.js', 'Tailwind CSS', 'Express', 'MySQL2'],
         date: '2024',
-        imageUrl: '/src/assets/ogz.png',
+        imageUrl: '/images/ogz.png',
         details: [
           "Page d'authentification",
           'Restriction des droits pour les profils non administrateurs',
@@ -134,7 +134,7 @@ const projectCategories = ref<ProjectCategory[]>([
         pdfUrl: '/pdfs/Installation_GLPI_10.pdf',
         technologies: ['Virtualbox', 'bash'],
         date: '2023',
-        imageUrl: '/src/assets/GLPI.gif',
+        imageUrl: '/images/GLPI.gif',
         details: ['Mise en place environnement web complet', "Compréhension d'un serveur Linux"],
       },
     ],
@@ -171,7 +171,7 @@ const openPdf = (url: string) => {
 // Fonction pour télécharger le tableau de compétences E5
 const downloadE5Summary = () => {
   // Remplacez ce chemin par le bon chemin vers votre fichier PDF
-  const pdfUrl = 'public/pdfs/E5_tableauSynthèse.pdf'
+  const pdfUrl = '/pdfs/E5_tableauSynthèse.pdf'
   window.open(pdfUrl, '_blank')
 }
 </script>
@@ -663,7 +663,6 @@ const downloadE5Summary = () => {
   margin-bottom: auto;
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;

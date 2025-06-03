@@ -12,7 +12,7 @@ const toggleMenu = () => {
   <nav class="navbar">
     <div class="nav-container">
       <router-link to="/" class="logo-container">
-        <img src="@/assets/logo-portfolio.png" alt="Logo" class="logo" />
+        <img src="/images/logo-portfolio.png" alt="Logo" class="logo" />
       </router-link>
 
       <button class="menu-button" @click="toggleMenu" aria-label="Menu">
@@ -22,13 +22,10 @@ const toggleMenu = () => {
       <div :class="['nav-links', { open: isMenuOpen }]">
         <router-link to="/" class="nav-link" @click="isMenuOpen = false"> Accueil </router-link>
         <router-link to="/about" class="nav-link" @click="isMenuOpen = false">
-          À propos de moi
+          À propos
         </router-link>
         <router-link to="/projects" class="nav-link" @click="isMenuOpen = false">
           Projets
-        </router-link>
-        <router-link to="/veille" class="nav-link" @click="isMenuOpen = false">
-          Ma Veille
         </router-link>
       </div>
     </div>
@@ -82,18 +79,6 @@ const toggleMenu = () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-.logo:hover {
-  color: var(--secondary-color);
 }
 
 .nav-links {

@@ -97,7 +97,7 @@ const languageSkills = [
   {
     name: 'VBA',
     icon: 'vba-custom-icon',
-    iconUrl: '/src/assets/vba.jpg', // Vous devrez ajouter cette image
+    iconUrl: '/images/vba.jpg',
     category: 'Automation',
     description: 'Automatisation de tâches dans Microsoft Office',
     relatedSkills: ['Macros Excel', 'Access VBA'],
@@ -141,7 +141,7 @@ const toolSkills = [
   {
     name: 'Excel',
     icon: 'excel-custom-icon',
-    iconUrl: '/src/assets/excel.png',
+    iconUrl: '/images/excel.png',
     category: 'Bureautique',
     description: 'Analyse de données et tableaux complexes',
     relatedSkills: ['Macros', 'Tableaux croisés', 'Formules'],
@@ -150,7 +150,7 @@ const toolSkills = [
   {
     name: 'Access',
     icon: 'access-custom-icon',
-    iconUrl: '/src/assets/access.png',
+    iconUrl: '/images/access.png',
     category: 'Base de données',
     description: 'Gestion de bases de données relationnelles',
     relatedSkills: ['SQL', 'Formulaires', 'Requêtes'],
@@ -159,7 +159,7 @@ const toolSkills = [
   {
     name: 'Word',
     icon: 'word-custom-icon',
-    iconUrl: '/src/assets/word.png',
+    iconUrl: '/images/word.png',
     description: 'Traitement de texte et documentation professionnelle',
     relatedSkills: ['Styles', 'Mise en page'],
     color: '#2B579A',
@@ -167,7 +167,7 @@ const toolSkills = [
   {
     name: 'Postman',
     icon: 'postman-custom-icon',
-    iconUrl: '/src/assets/postman.png',
+    iconUrl: '/images/postman.png',
     category: 'API Testing',
     description: "Test et développement d'APIs",
     relatedSkills: ['API REST', 'Tests automatisés'],
