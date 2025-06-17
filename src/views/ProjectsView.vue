@@ -21,18 +21,19 @@ const projectCategories = ref<ProjectCategory[]>([
     projects: [
       {
         id: 1,
-        title: 'NurseCare',
+        title: "Organiz'heure",
         description:
-          'Une application de gestion des différents rôles dans un hôpital permettant de suivre les tâches, les patients et les équipes médicales.',
-        pdfUrl: '/pdfs/NurseCare.pdf',
-        technologies: ['Vue.js', 'Node.js', 'MySQL', 'Express'],
-        date: '2025',
-        imageUrl: '/images/Nursecare.png',
+          "Application web de gestion de todolist avec système d'authentification et gestion des droits administrateur.",
+        pdfUrl: '/pdfs/Livrable_Organiz.pdf',
+        technologies: ['Vue.js', 'Tailwind CSS', 'Express', 'MySQL2'],
+        date: '2024',
+        imageUrl: '/images/ogz.png',
         details: [
-          "Système d'authentification avec gestion des rôles",
-          'Interface utilisateur responsive et intuitive',
-          'Planification des tâches et gestion des équipes',
-          'Suivi des dossiers patients en temps réel',
+          "Page d'authentification sécurisée",
+          'Restriction des droits pour les profils non administrateurs',
+          'Mots de passe hashés en base de données',
+          'Gestion complète des tâches avec CRUD',
+          'Interface utilisateur moderne et responsive',
         ],
       },
       {
